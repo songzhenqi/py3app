@@ -11,7 +11,7 @@ pages = set()
 random.seed(datetime.datetime.now())
 
 
-# Retrieves a list of all Internal links found on a page
+# Retrieves a list of all Internal links found on a page, hello
 def get_internal_links(bs_obj, include_url):
     internal_links = []
     # Finds all links that begin with a "/"
