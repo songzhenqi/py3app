@@ -41,7 +41,7 @@ def split_address(address):
 
 def get_random_external_link(starting_page):
     html = urlopen(starting_page)
-    bsobj = BeautifulSoup(html)
+    bsobj = BeautifulSoup(html, "html.parser")
     external_links = get_external_links(bsobj, split_address(starting_page)[0])
     if len(external_links) == 0:
         internal_links = get_internal_links(bsobj, starting_page)
